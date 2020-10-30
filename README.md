@@ -44,7 +44,7 @@ npm install blurhash_service
 #### blurByURL
 
 ```javascript
-  const blurhash= require('blurhash_service');
+  const blurhash = require('blurhash_service');
 
   blurhash.config({ apiKey: 'YOUR_API_KEY' });
 
@@ -67,7 +67,7 @@ npm install blurhash_service
 #### getBlurById
 
 ```javascript
-  const blurhash= require('blurhash_service');
+  const blurhash = require('blurhash_service');
 
   blurhash.config({ apiKey: 'YOUR_API_KEY' });
 
