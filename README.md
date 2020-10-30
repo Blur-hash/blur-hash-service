@@ -21,16 +21,16 @@ npm install blurhash_service
 #### blurByBase64
 
 ```javascript
-  const blurhashService = require('blurhash_service');
+  const blurhashClient = require('blurhash_service');
 
-  blurhash.config({ apiKey: 'YOUR_API_KEY' });
+  blurhashClient.config({ apiKey: 'YOUR_API_KEY' });
 
   const options = {
     'value':   'data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=',
     'quality': 2,
   };
 
-  const { data } = await blurhashService.blurByBase64(options);
+  const { data } = await blurhashClient.blurByBase64(options);
 
   // output
   //  {
@@ -44,16 +44,16 @@ npm install blurhash_service
 #### blurByURL
 
 ```javascript
-  const blurhashService = require('blurhash_service');
+  const blurhashClient = require('blurhash_service');
 
-  blurhash.config({ apiKey: 'YOUR_API_KEY' });
+  blurhashClient.config({ apiKey: 'YOUR_API_KEY' });
 
   const options = {
     'value':   'https://i.picsum.photos/id/962/100/100.jpg?hmac=1R-Ep4_VzvNYC_FbmfgTK6cMjpkCs7TjjQC8JhVyNpA',
     'quality': 2,
   };
 
-  const { data } = await blurhash.blurByUrl(options);
+  const { data } = await blurhashClient.blurByUrl(options);
 
   // output
   //  {
@@ -67,13 +67,13 @@ npm install blurhash_service
 #### getBlurById
 
 ```javascript
-  const blurhashService = require('blurhash_service');
+  const blurhashClient = require('blurhash_service');
 
-  blurhash.config({ apiKey: 'YOUR_API_KEY' });
+  blurhashClient.config({ apiKey: 'YOUR_API_KEY' });
 
   const validBlurId = '0c6e9803-22ac-4cb9-9990-eaf7dfd12542';
 
-  const { data } = await blurhash.getBlurById(validBlurId);
+  const { data } = await blurhashClient.getBlurById(validBlurId);
 
   // output
   //  {
