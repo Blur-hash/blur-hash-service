@@ -15,6 +15,7 @@ You can get your free api key by signing up here: [https://blur-hash.com/login](
 npm install blurhash_service
 ```
 
+
 ### Getting started:
 
 #### blurByBase64
