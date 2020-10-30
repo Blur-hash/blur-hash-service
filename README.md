@@ -5,9 +5,9 @@
   <img src="https://blur-hash.com/logo2.a7c40623.png">
 </p>
 
-Blur hash as a service is a wrapper around the website: [www.blur-hash.com](https://www.blur-hash.com)
+Blur hash as a service is a wrapper around the website and api: [blur-hash.com](https://www.blur-hash.com)
 
-You can get your free api key by signing up here: [https://blur-hash.com/login](https://blur-hash.com/#/login)
+You can get your free api key by signing up here: [blur-hash.com/login](https://blur-hash.com/#/login)
 
 
 ### To install run
