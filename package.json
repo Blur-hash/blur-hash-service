@@ -1,13 +1,23 @@
 {
   "name": "blurhash_service",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "blur hash images in the cloud",
   "main": "index.js",
   "scripts": {
     "test": "mocha ./test/**"
   },
-  "author": "Blur-hash",
+  "author": "Blur-hash.com",
   "license": "ISC",
+  "keywords": [
+    "blurhash",
+    "blur-hash",
+    "blur-hashing",
+    "blur image",
+    "blurry"
+  ],
+  "bugs": {
+    "url": "https://github.com/Blur-hash/blur-hash-service/issues"
+  },
   "dependencies": {
     "chai": "^4.2.0",
     "mocha": "^8.2.0",
