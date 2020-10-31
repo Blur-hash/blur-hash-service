@@ -9,6 +9,11 @@ Blur hash as a service is a wrapper around the website and api: [blur-hash.com](
 
 You can get your free api key by signing up here: [blur-hash.com/login](https://blur-hash.com/#/login)
 
+For rendering the blurhash on the front end you can use the below libraries:
+
+> React Component: [react-blurhash](https://github.com/woltapp/react-blurhash)
+> React Native: [react-native-blurhash](https://github.com/mrousavy/react-native-blurhash/blob/master/README.md)
+
 ### Getting started:
 ```
 npm install blurhash_service
@@ -99,5 +104,4 @@ yarn add blurhash_service
   init();
 
 ```
-
 
