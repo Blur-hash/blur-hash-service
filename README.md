@@ -13,7 +13,8 @@ You can get your free api key by signing up here: [blur-hash.com/login](https://
 For rendering the blurhash on the front end you can use the below libraries:
 
 > React Component: [react-blurhash](https://github.com/woltapp/react-blurhash)
-<br>
+
+
 > React Native: [react-native-blurhash](https://github.com/mrousavy/react-native-blurhash/blob/master/README.md)
 
 ### Getting started:
