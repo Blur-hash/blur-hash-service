@@ -9,14 +9,14 @@ Blur hash as a service is a wrapper around the website and api: [blur-hash.com](
 
 You can get your free api key by signing up here: [blur-hash.com/login](https://blur-hash.com/#/login)
 
-
-### To install run
+### Getting started:
 ```
 npm install blurhash_service
 ```
 
-
-### Getting started:
+```
+yarn add blurhash_service
+```
 
 #### blurByBase64
 
@@ -30,14 +30,19 @@ npm install blurhash_service
     'quality': 2,
   };
 
-  const { data } = await blurhash.blurByBase64(options);
+  async function init() {
+    const { data } = await blurhash.blurByBase64(options);
 
-  // output
-  //  {
-  //    message: 'Success',
-  //    id:      '0c6e9803-22ac-4cb9-9990-eaf7dfd12542',
-  //    hash:    'AL8Nwo~q~q~q'
-  //  }
+    console.log(data);
+    // output
+    //  {
+    //    message: 'Success',
+    //    id:      '0c6e9803-22ac-4cb9-9990-eaf7dfd12542',
+    //    hash:    'AL8Nwo~q~q~q'
+    //  }
+  }
+
+  init();
 
 ```
 
@@ -53,14 +58,20 @@ npm install blurhash_service
     'quality': 2,
   };
 
-  const { data } = await blurhash.blurByUrl(options);
+  async function init() {
 
-  // output
-  //  {
-  //    message: 'Success',
-  //    id:      '0c6e9803-22ac-4cb9-9990-eaf7dfd12542',
-  //    hash:    'AfFrt]E2~qNH'
-  //  }
+    const { data } = await blurhash.blurByUrl(options);
+
+    console.log(data);
+    // output
+    //  {
+    //    message: 'Success',
+    //    id:      '0c6e9803-22ac-4cb9-9990-eaf7dfd12542',
+    //    hash:    'AfFrt]E2~qNH'
+    //  }
+  };
+
+  init();
 
 ```
 
@@ -73,13 +84,20 @@ npm install blurhash_service
 
   const validBlurId = '0c6e9803-22ac-4cb9-9990-eaf7dfd12542';
 
-  const { data } = await blurhash.getBlurById(validBlurId);
+  async function init() {
 
-  // output
-  //  {
-  //    message: 'Success',
-  //    hash:    'L~LW#Xv}f,WqPqOYWAj[M{f,nhn$'
-  //  }
+    const { data } = await blurhash.getBlurById(validBlurId);
+
+    console.log(data);
+    // output
+    //  {
+    //    message: 'Success',
+    //    hash:    'L~LW#Xv}f,WqPqOYWAj[M{f,nhn$'
+    //  }
+  };
+
+  init();
+
 ```
 
 
