@@ -10,6 +10,8 @@
 
 You can get your free api key by signing up here: [blur-hash.com/login](https://blur-hash.com/#/login)
 
+React-blurhash has a [DEMO you can view here](https://woltapp.github.io/react-blurhash/)
+
 For rendering the blurhash on the front end you can use the below libraries:
 
 > React Component: [react-blurhash](https://github.com/woltapp/react-blurhash)

@@ -1,6 +1,6 @@
 {
   "name": "blurhash_service",
-  "version": "1.0.10",
+  "version": "1.0.12",
   "description": "blur hash images in the cloud",
   "main": "index.js",
   "scripts": {
