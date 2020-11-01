@@ -54,6 +54,30 @@ async function blurByBase64(options) {
   }
 }
 
+async function batchBlurByBase64(options) {
+
+  const requestParameters = {
+    'method': 'POST',
+    'url':    'https://api.blur-hash.com/blur/batchBuffer',
+    'headers': {
+      'x-api-key':    LOCAL_API_KEY,
+      'Content-Type': 'application/json'
+    },
+    'body': JSON.stringify({
+      'base64Array': options
+    })
+  }
+
+  try {
+    const result = await request(requestParameters);
+    const parsed = JSON.parse(result);
+
+    return parsed;
+  } catch(error) {
+    throw new Error(error)
+  }
+}
+
 async function getBlurById(blurId) {
 
   const requestParameters = {
@@ -78,5 +102,6 @@ module.exports = {
   getBlurById,
   blurByUrl,
   blurByBase64,
+  batchBlurByBase64,
   config
 }

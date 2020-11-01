@@ -112,3 +112,44 @@ init();
 
 ```
 
+#### batchBlurByBase64:
+
+```javascript
+const blurhash = require('blurhash_service');
+
+blurhash.config({ apiKey: 'YOUR_API_KEY' });
+
+const validBlurArray = [
+  {
+    "value":   "R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=",
+    "quality": 2
+  },
+  {
+    "value":   "R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=",
+    "quality": 2
+  }
+];
+
+async function init() {
+  const { data } = await blurhash.batchBlurByBase64(validBlurArray);
+
+  console.log(data);
+  // output
+  //  {
+  //    message: 'Success',
+  //    hashs: [
+  //      {
+  //        'hash': 'AL8Nwo~q~q~q',
+  //        'id':   '0c6e9803-22ac-4cb9-9990-eaf7dfd12542'
+  //      },
+  //      {
+  //        'hash': 'AL8Nwo~q~q~q',
+  //        'id':   '0c6e9803-22ac-4cb9-9990-eaf7dfd12542'
+  //      }
+  //    ]
+  //  }
+}
+
+init();
+
+```
