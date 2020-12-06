@@ -1,10 +1,11 @@
 {
   "name": "blurhash_service",
-  "version": "1.0.12",
+  "version": "1.0.14",
   "description": "blur hash images in the cloud",
   "main": "index.js",
   "scripts": {
-    "test": "mocha ./test/**"
+    "test": "mocha ./test/**",
+    "publish": "npm publish"
   },
   "author": "Blur-hash.com",
   "license": "ISC",

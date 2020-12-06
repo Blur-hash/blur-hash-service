@@ -28,6 +28,36 @@ For rendering the blurhash on the front end you can use the below libraries:
 
 ### Methods:
 
+#### blurByImage:
+
+```javascript
+const blurhash = require('blurhash_service');
+
+blurhash.config({ apiKey: 'YOUR_API_KEY' });
+
+const options = {
+  'pathToImage': './test/test_image.png',
+  'quality':     2,
+};
+
+async function init() {
+  const { data } = await blurhash.convertImageToHash(options);
+
+  console.log(data);
+  // output
+  // {
+  //   message: 'Success',
+  //   id: '5a298b61-bcfa-4b3a-a647-b984e6e04364',
+  //   hash: 'AQI|Z}$%~Toy'
+  // }
+}
+
+init();
+
+```
+
+<br />
+
 #### blurByBase64:
 
 ```javascript

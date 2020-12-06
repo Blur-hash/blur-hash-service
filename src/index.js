@@ -1,4 +1,5 @@
 const request = require('request-promise');
+const fs = require('fs');
 
 let LOCAL_API_KEY = undefined;
 
@@ -98,10 +99,27 @@ async function getBlurById(blurId) {
   }
 }
 
+async function convertImageToHash(options) {
+
+  const rawImageData = fs.readFileSync(options.pathToImage);
+
+  const base64String = Buffer.from(rawImageData).toString('base64');
+
+  const localOptions = {
+    'value':   base64String,
+    'quality': options.quality,
+  };
+
+  const result = await blurByBase64(localOptions);
+
+  return result;
+}
+
 module.exports = {
   getBlurById,
   blurByUrl,
   blurByBase64,
   batchBlurByBase64,
+  convertImageToHash,
   config
 }

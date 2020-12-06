@@ -1,10 +1,10 @@
 'use strict';
 
 const { expect } = require('chai');
-const blurhash = require('../src/')
+const blurhash = require('../src/');
 
 const TEST_API_KEY = process.env.BLUR_HASH_TEST_API_KEY;
-const EXTENDED_TIMEOUT = 4000
+const EXTENDED_TIMEOUT = 6000
 
 describe('bluring', function() {
   describe('blurByBase64()', async function() {
@@ -161,6 +161,29 @@ describe('bluring', function() {
         message: 'Success',
         hash:    'L~LW#Xv}f,WqPqOYWAj[M{f,nhn$'
       });
+    });
+  });
+
+  describe('convertImageToHash()', async function() {
+    it('returns a valid hash', async function() {
+      this.timeout(EXTENDED_TIMEOUT);
+
+      blurhash.config({ apiKey: TEST_API_KEY });
+
+      const validImagePath = './test/test_image.png';
+
+      const options = {
+        'pathToImage': validImagePath,
+        'quality':     2,
+      };
+
+      const { data } = await blurhash.convertImageToHash(options);
+
+      expect(data).to.deep.equal({
+        message: 'Success',
+        id:      data.id,
+        hash:    'AQI|Z}$%~Toy'
+      })
     });
   });
 });
